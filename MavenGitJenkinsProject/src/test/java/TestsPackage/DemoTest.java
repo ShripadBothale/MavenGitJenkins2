@@ -11,6 +11,7 @@ public class DemoTest {
 		WebDriver driver = new FirefoxDriver();
 		String baseUrl = "http://en.wikipedia.org/wiki/Main_Page";
 		  driver.get(baseUrl);
+		  driver.manage().window().maximize();
 		  driver.findElement(By.xpath(".//*[@id='searchInput']")).sendKeys("software testing");
 		  driver.findElement(By.xpath("//*[@id='searchButton']")).click();
 		  driver.close();
